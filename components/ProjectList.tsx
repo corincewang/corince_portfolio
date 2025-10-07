@@ -8,9 +8,9 @@ const ProjectList = () => {
       id: 1,
       title: 'Santorini Multiple Player Online Game',
       description: 'A multiplayer online board game implementation of Santorini with real-time gameplay, featuring strategic building mechanics and competitive multiplayer functionality.',
-      image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&h=400&fit=crop',
-      category: 'Game Development',
-      duration: '3 months',
+      image: '/assets/Santorini.png',
+      category: 'Web Application Development',
+      duration: '2 months',
       date: '2024-03-15',
       tags: ['Java', 'Multiplayer', 'Game Development', 'Socket Programming', 'GUI'],
       github: 'https://github.com/corincewang/santorini-game',
@@ -23,26 +23,14 @@ const ProjectList = () => {
       description: 'A Unity-based arcade shooting game featuring three challenging levels including a boss fight. Experience fast-paced action with retro-inspired graphics and engaging gameplay mechanics.',
       image: '/assets/AstralAttackers.png',
       category: 'Game Development',
-      duration: '2 months',
-      date: '2024-02-20',
+      duration: '1 month',
+      date: '2025-09-01',
       tags: ['Unity', 'C#', 'Game Development', 'Arcade', '2D Game'],
-      github: 'https://github.com/corincewang/astral-attackers',
+      github: 'https://github.com/corincewang/AstralAttackers',
       live: '',
       featured: true
     },
-    {
-      id: 3,
-      title: 'Building a Full-Stack React Application',
-      description: 'Complete guide to building a modern web application with React, Node.js, and MongoDB. Learn about state management, API design, and deployment.',
-      image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
-      category: 'Web Development',
-      duration: '45 min read',
-      date: '2024-01-15',
-      tags: ['React', 'Node.js', 'MongoDB', 'JavaScript'],
-      github: 'https://github.com/corincewang/react-tutorial',
-      live: 'https://react-tutorial-demo.com',
-      featured: false
-    },
+    
   ]
 
 
