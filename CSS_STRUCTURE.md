@@ -69,4 +69,4 @@
 ✅ DiaryList组件 - 移除Framer Motion，使用CSS动画
 ✅ TutorialsList组件 - 移除Framer Motion，使用CSS动画
 
-所有内联CSS和Framer Motion动画已成功提取到独立的CSS文件中。
+所有内联CSS和Framer Motion动画已成功提取到独立的CSS文件中。 

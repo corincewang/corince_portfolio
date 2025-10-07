@@ -259,4 +259,4 @@ body:has(.sidebar-expanded) .main-content {
     opacity: 1;
     transform: translateX(0);
   }
-}
+} 

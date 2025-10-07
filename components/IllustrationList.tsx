@@ -156,4 +156,4 @@ const IllustrationList = () => {
   )
 }
 
-export default IllustrationList
+export default IllustrationList 

@@ -18,4 +18,4 @@ echo "🌐 Deploying to Vercel..."
 vercel --prod
 
 echo "✅ Deployment complete!"
-echo "🔗 Your website is now live!"
+echo "🔗 Your website is now live!" 

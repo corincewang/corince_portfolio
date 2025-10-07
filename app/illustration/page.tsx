@@ -25,4 +25,4 @@ export default function IllustrationPage() {
       <Sidebar />
     </div>
   )
-}
+} 
