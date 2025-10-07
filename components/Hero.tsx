@@ -42,8 +42,7 @@ const Hero = () => {
                     <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Java</span>
                     <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">C++</span>
                     <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">SQL</span>
-                    <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">HTML/CSS</span>
-                    <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Go</span>
+                    <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">React.js</span>
                   </div>
                 </div>
 
@@ -71,10 +70,7 @@ const Hero = () => {
                 </div>
 
                 <div className="mt-12 text-lg text-gray-600 space-y-4">
-                  <p>🎓 <span className="font-semibold">Carnegie Mellon University</span> • Information Systems • GPA: 3.89/4.00</p>
-                  <p>💼 <span className="font-semibold">Software Engineer Intern</span> • Menu Inc.</p>
-                  <p>🚀 <span className="font-semibold">Full-Stack Engineer</span> • Toyz Electronics</p>
-                  <p>🎨 <span className="font-semibold">Digital Artist</span> • Creative Designer</p>
+                 
                 </div>
               </div>
             </div>

@@ -6,102 +6,45 @@ const ProjectList = () => {
   const projects = [
     {
       id: 1,
+      title: 'Santorini Multiple Player Online Game',
+      description: 'A multiplayer online board game implementation of Santorini with real-time gameplay, featuring strategic building mechanics and competitive multiplayer functionality.',
+      image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&h=400&fit=crop',
+      category: 'Game Development',
+      duration: '3 months',
+      date: '2024-03-15',
+      tags: ['Java', 'Multiplayer', 'Game Development', 'Socket Programming', 'GUI'],
+      github: 'https://github.com/corincewang/santorini-game',
+      live: '',
+      featured: true
+    },
+    {
+      id: 2,
+      title: 'Astral Attackers',
+      description: 'A Unity-based arcade shooting game featuring three challenging levels including a boss fight. Experience fast-paced action with retro-inspired graphics and engaging gameplay mechanics.',
+      image: '/assets/AstralAttackers.png',
+      category: 'Game Development',
+      duration: '2 months',
+      date: '2024-02-20',
+      tags: ['Unity', 'C#', 'Game Development', 'Arcade', '2D Game'],
+      github: 'https://github.com/corincewang/astral-attackers',
+      live: '',
+      featured: true
+    },
+    {
+      id: 3,
       title: 'Building a Full-Stack React Application',
       description: 'Complete guide to building a modern web application with React, Node.js, and MongoDB. Learn about state management, API design, and deployment.',
       image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
       category: 'Web Development',
       duration: '45 min read',
       date: '2024-01-15',
-      difficulty: 'Intermediate',
       tags: ['React', 'Node.js', 'MongoDB', 'JavaScript'],
       github: 'https://github.com/corincewang/react-tutorial',
       live: 'https://react-tutorial-demo.com',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'UI/UX Design Principles for Developers',
-      description: 'Essential design principles every developer should know. Learn how to create beautiful and functional user interfaces.',
-      image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=400&fit=crop',
-      category: 'Design',
-      duration: '30 min read',
-      date: '2024-01-10',
-      difficulty: 'Beginner',
-      tags: ['UI/UX', 'Design', 'Figma', 'Accessibility'],
-      github: '',
-      live: 'https://design-principles-guide.com',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Machine Learning with Python',
-      description: 'Introduction to machine learning concepts and implementation using Python, scikit-learn, and TensorFlow.',
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop',
-      category: 'Data Science',
-      duration: '60 min read',
-      date: '2024-01-05',
-      difficulty: 'Advanced',
-      tags: ['Python', 'Machine Learning', 'TensorFlow', 'Data Science'],
-      github: 'https://github.com/corincewang/ml-tutorial',
-      live: 'https://ml-tutorial-demo.com',
       featured: false
     },
-    {
-      id: 4,
-      title: 'Mobile App Development with React Native',
-      description: 'Build cross-platform mobile applications using React Native. Learn about navigation, state management, and native features.',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop',
-      category: 'Mobile Development',
-      duration: '50 min read',
-      date: '2023-12-28',
-      difficulty: 'Intermediate',
-      tags: ['React Native', 'JavaScript', 'Mobile', 'iOS', 'Android'],
-      github: 'https://github.com/corincewang/rn-tutorial',
-      live: 'https://rn-tutorial-demo.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Digital Art Techniques and Tools',
-      description: 'Explore digital art creation using various tools and techniques. From concept to final artwork.',
-      image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=400&fit=crop',
-      category: 'Digital Art',
-      duration: '35 min read',
-      date: '2023-12-20',
-      difficulty: 'Beginner',
-      tags: ['Digital Art', 'Procreate', 'Photoshop', 'Illustration'],
-      github: '',
-      live: 'https://digital-art-guide.com',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'API Design and Documentation',
-      description: 'Best practices for designing RESTful APIs and creating comprehensive documentation for developers.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop',
-      category: 'Backend Development',
-      duration: '40 min read',
-      date: '2023-12-15',
-      difficulty: 'Intermediate',
-      tags: ['API', 'REST', 'Documentation', 'Node.js', 'OpenAPI'],
-      github: 'https://github.com/corincewang/api-tutorial',
-      live: 'https://api-tutorial-demo.com',
-      featured: false
-    }
   ]
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner':
-        return 'bg-green-100 text-green-800'
-      case 'Intermediate':
-        return 'bg-yellow-100 text-yellow-800'
-      case 'Advanced':
-        return 'bg-red-100 text-red-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
-    }
-  }
 
   return (
     <div className="space-y-8 grid-container">
@@ -128,9 +71,6 @@ const ProjectList = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-sm text-gray-500 font-medium">{project.category}</span>
-                  <span className={`px-2 py-1 text-xs font-medium rounded ${getDifficultyColor(project.difficulty)}`}>
-                    {project.difficulty}
-                  </span>
                 </div>
                 <div className="flex items-center space-x-4 text-sm text-gray-500">
                   <div className="flex items-center space-x-1">
