@@ -1,0 +1,262 @@
+/* Animation Classes for Framer Motion */
+
+/* Hero Section Animations */
+.hero-portrait-enter {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: heroPortraitEnter 1s ease forwards;
+}
+
+.hero-text-enter {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroTextEnter 1s ease 0.3s forwards;
+}
+
+@keyframes heroPortraitEnter {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroTextEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sidebar Animations */
+.sidebar-logo-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: sidebarLogoEnter 1s ease 0.5s forwards;
+}
+
+/* Sidebar states */
+.sidebar-collapsed {
+  width: 80px !important;
+  transition: width 0.3s ease;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 100vh !important;
+  z-index: 50 !important;
+}
+
+.sidebar-expanded {
+  width: 200px !important;
+  transition: width 0.3s ease;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 100vh !important;
+  z-index: 50 !important;
+}
+
+
+/* Main content adjustment based on sidebar state */
+.sidebar-collapsed ~ .main-content,
+.sidebar-collapsed + .main-content {
+  width: calc(100% - 80px) !important;
+  transition: width 0.3s ease;
+  margin-right: 0 !important;
+}
+
+.sidebar-expanded ~ .main-content,
+.sidebar-expanded + .main-content {
+  width: calc(100% - 200px) !important;
+  transition: width 0.3s ease;
+  margin-right: 0 !important;
+}
+
+/* Alternative approach - target main-content directly when sidebar state changes */
+body:has(.sidebar-collapsed) .main-content {
+  width: calc(100% - 80px) !important;
+  transition: width 0.3s ease;
+}
+
+body:has(.sidebar-expanded) .main-content {
+  width: calc(100% - 200px) !important;
+  transition: width 0.3s ease;
+}
+
+.sidebar-menu-enter {
+  opacity: 0;
+  transform: scale(0);
+  animation: sidebarMenuEnter 1s ease 0.6s forwards;
+}
+
+.sidebar-nav-enter {
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.sidebar-nav-enter-active {
+  opacity: 1;
+  height: auto;
+}
+
+.sidebar-scroll-enter {
+  opacity: 0;
+  transform: scale(0);
+  animation: sidebarScrollEnter 1s ease 0.7s forwards;
+}
+
+.sidebar-social-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sidebarSocialEnter 1s ease 0.8s forwards;
+}
+
+.sidebar-arrow-enter {
+  opacity: 0;
+  animation: sidebarArrowEnter 1s ease 0.9s forwards;
+}
+
+@keyframes sidebarLogoEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sidebarMenuEnter {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sidebarScrollEnter {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sidebarSocialEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sidebarArrowEnter {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Grid Animations */
+.grid-container {
+  opacity: 0;
+  animation: gridContainerEnter 0.6s ease forwards;
+}
+
+.grid-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: gridItemEnter 0.6s ease forwards;
+}
+
+/* Staggered animations for grid items */
+.grid-item:nth-child(1) { animation-delay: 0.1s; }
+.grid-item:nth-child(2) { animation-delay: 0.2s; }
+.grid-item:nth-child(3) { animation-delay: 0.3s; }
+.grid-item:nth-child(4) { animation-delay: 0.4s; }
+.grid-item:nth-child(5) { animation-delay: 0.5s; }
+.grid-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes gridContainerEnter {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gridItemEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Button animations */
+.button-press {
+  transition: transform 0.1s ease;
+}
+
+.button-press:active {
+  transform: scale(0.95);
+}
+
+/* Fade animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

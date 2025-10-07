@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ExternalLink, Github } from 'lucide-react'
 
@@ -74,39 +73,12 @@ const WorksGrid = () => {
     }
   ]
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6
-      }
-    }
-  }
-
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 grid-container">
       {works.map((work) => (
-        <motion.div
+        <div
           key={work.id}
-          variants={itemVariants}
-          className="group bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden"
+          className="group bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden grid-item hover-lift"
         >
           <div className="relative h-64 overflow-hidden">
             <Image
@@ -168,9 +140,9 @@ const WorksGrid = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       ))}
-    </motion.div>
+    </div>
   )
 }
 

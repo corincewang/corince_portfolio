@@ -1,129 +1,53 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react'
+import Sidebar from './Sidebar'
 
 const Hero = () => {
   return (
     <div className="flex min-h-screen">
       {/* Main Content Area - Left 70% */}
       <div className="w-3/4 main-content flex items-center justify-center p-8">
-        <div className="flex items-center w-full max-w-6xl">
-          {/* Portrait Area - Left */}
-          <div className="w-1/3 pr-8">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="portrait-container"
-            >
-              <div className="w-full h-96 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                <div className="text-white text-6xl font-bold serif-text">HW</div>
-              </div>
-            </motion.div>
-          </div>
+        <div className="flex items-center justify-center w-full max-w-6xl">
+          {/* Text Content - Centered */}
+          <div className="w-full max-w-4xl relative text-center">
+                {/* Orange Brackets */}
+                <div className="absolute -top-4 -left-4 orange-bracket">┌</div>
+                <div className="absolute -top-4 -right-4 orange-bracket">┐</div>
+                <div className="absolute -bottom-4 -left-4 orange-bracket">└</div>
+                <div className="absolute -bottom-4 -right-4 orange-bracket">┘</div>
 
-          {/* Text Content - Center */}
-          <div className="w-2/3 pl-8 relative">
-            {/* Orange Brackets */}
-            <div className="absolute -top-4 -left-4 orange-bracket">┌</div>
-            <div className="absolute -top-4 -right-4 orange-bracket">┐</div>
-            <div className="absolute -bottom-4 -left-4 orange-bracket">└</div>
-            <div className="absolute -bottom-4 -right-4 orange-bracket">┘</div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="text-center"
-            >
-              <p className="text-lg text-gray-600 mb-4">Hey there! My name is</p>
+            <div className="text-content hero-text-enter">
+              <p className="text-xl text-white/90 mb-6 sans-text-light">Hey there! My name is</p>
               
-              <h1 className="text-6xl md:text-8xl font-bold serif-text text-2d1b69 mb-4">
+              <h1 className="text-7xl md:text-9xl serif-text-large text-white mb-6 leading-tight">
                 HAN WANG
               </h1>
               
-              <p className="text-lg text-gray-600 mb-4">or you can call me</p>
+              <p className="text-xl text-white/90 mb-6 sans-text-light">or you can call me</p>
               
-              <h2 className="text-6xl md:text-8xl font-bold serif-text text-2d1b69 mb-8">
+              <h2 className="text-7xl md:text-9xl serif-text-large text-white mb-12 leading-tight">
                 HAN
               </h2>
               
-              <p className="text-xl text-2d1b69 mb-2">
-                I am a Computer Science Student,<br />
-                Software Engineer,<br />
-                UI Designer<br />
+              <p className="text-2xl text-white mb-8 leading-relaxed max-w-3xl mx-auto">
+                I am a <span className="orange-accent font-bold">Carnegie Mellon University</span> Student,<br />
+                <span className="orange-accent font-bold">Software Engineer</span> at Menu Inc.,<br />
+                <span className="orange-accent font-bold">Full-Stack Developer</span><br />
                 ... <span className="orange-accent font-bold">and just a human</span>
               </p>
-            </motion.div>
+              
+              <div className="mt-8 text-base text-white/90 space-y-3">
+                <p>🎓 <span className="font-semibold">Information Systems</span> • GPA: 3.89/4.00</p>
+                <p>💼 <span className="font-semibold">Software Engineer Intern</span> • Menu Inc.</p>
+                <p>🚀 <span className="font-semibold">Full-Stack Engineer</span> • Toyz Electronics</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Right Sidebar - 25% */}
-      <div className="w-1/4 sidebar flex flex-col items-center justify-between p-6">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-white text-2xl font-bold serif-text"
-        >
-          HW
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="flex flex-col items-center space-y-4"
-        >
-          <div className="scroll-indicator h-32"></div>
-          <div className="text-white text-xs">SCROLL</div>
-        </motion.div>
-
-        {/* Social Media Icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="flex flex-col space-y-4"
-        >
-          <a
-            href="mailto:han.wang@email.com"
-            className="text-white hover:text-orange-400 transition-colors"
-          >
-            <Mail size={20} />
-          </a>
-          <a
-            href="https://github.com/hanwang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-orange-400 transition-colors"
-          >
-            <Github size={20} />
-          </a>
-          <a
-            href="https://linkedin.com/in/hanwang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-orange-400 transition-colors"
-          >
-            <Linkedin size={20} />
-          </a>
-        </motion.div>
-
-        {/* Scroll Down Arrow */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="text-white"
-        >
-          <ChevronDown size={24} />
-        </motion.div>
-      </div>
+      <Sidebar />
     </div>
   )
 }

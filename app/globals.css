@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import './animations.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +11,8 @@
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #f8f6f0;
-    color: #2d1b69;
+    background-color: #2d8f7f;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -24,13 +25,29 @@
   }
   
   .main-content {
-    background-color: #f8f6f0;
+    background-color: #ffffff;
     min-height: 100vh;
   }
   
   .sidebar {
-    background-color: #2d1b69;
+    background-color: #1f6b5e;
     min-height: 100vh;
+    position: relative;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #ffffff;
+  }
+  
+  .sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+    pointer-events: none;
   }
   
   .orange-accent {
@@ -44,10 +61,11 @@
   }
   
   .portrait-container {
-    background: linear-gradient(135deg, #2d1b69 0%, #4a2c8a 100%);
+    background: linear-gradient(135deg, #1f6b5e 0%, #0f4a3f 100%);
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 20px 40px rgba(45, 27, 105, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffffff;
   }
   
   .scroll-indicator {
@@ -66,5 +84,40 @@
     height: 20px;
     background: #ff6b35;
     border-radius: 2px;
+  }
+  
+  .portrait-inner {
+    background: linear-gradient(135deg, #0f4a3f 0%, #0a3a2f 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.3),
+      0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .portrait-text {
+    text-align: center;
+  }
+  
+  .text-content {
+    text-align: center;
+  }
+  
+  .sans-text-light {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+  }
+  
+  .serif-text-large {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-2px) scale(1.1);
   }
 }
