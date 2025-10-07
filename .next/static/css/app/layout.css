@@ -1,7 +1,7 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -505,9 +505,16 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 300;
   }
-.serif-text-large {
+.fancy-font {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #2d8f7f 0%, #ff6b35 50%, #2d8f7f 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
   }
 .social-icon {
     transition: all 0.3s ease;
@@ -524,17 +531,17 @@ body {
 .relative{
   position: relative;
 }
-.-bottom-4{
-  bottom: -1rem;
+.-bottom-6{
+  bottom: -1.5rem;
 }
-.-left-4{
-  left: -1rem;
+.-left-6{
+  left: -1.5rem;
 }
-.-right-4{
-  right: -1rem;
+.-right-6{
+  right: -1.5rem;
 }
-.-top-4{
-  top: -1rem;
+.-top-6{
+  top: -1.5rem;
 }
 .left-0{
   left: 0px;
@@ -579,8 +586,11 @@ body {
 .mb-8{
   margin-bottom: 2rem;
 }
-.mt-8{
-  margin-top: 2rem;
+.mt-12{
+  margin-top: 3rem;
+}
+.mt-16{
+  margin-top: 4rem;
 }
 .flex{
   display: flex;
@@ -603,9 +613,6 @@ body {
 .min-h-screen{
   min-height: 100vh;
 }
-.w-1\/4{
-  width: 25%;
-}
 .w-3\/4{
   width: 75%;
 }
@@ -617,6 +624,9 @@ body {
 }
 .max-w-4xl{
   max-width: 56rem;
+}
+.max-w-5xl{
+  max-width: 64rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -657,6 +667,9 @@ body {
 .gap-8{
   gap: 2rem;
 }
+.gap-3{
+  gap: 0.75rem;
+}
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -671,11 +684,6 @@ body {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-y-3 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -696,12 +704,25 @@ body {
 .rounded-lg{
   border-radius: 0.5rem;
 }
+.rounded-2xl{
+  border-radius: 1rem;
+}
+.rounded-full{
+  border-radius: 9999px;
+}
 .border{
   border-width: 1px;
+}
+.border-l-4{
+  border-left-width: 4px;
 }
 .border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+.border-orange-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(249 115 22 / var(--tw-border-opacity, 1));
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -733,6 +754,14 @@ body {
 .bg-yellow-100{
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
+}
+.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+.bg-orange-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity, 1));
 }
 .object-cover{
   -o-object-fit: cover;
@@ -792,17 +821,21 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
 }
-.text-7xl{
-  font-size: 4.5rem;
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .text-sm{
   font-size: 0.875rem;
@@ -867,12 +900,17 @@ body {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-.text-white\/90{
-  color: rgb(255 255 255 / 0.9);
-}
 .text-yellow-800{
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
+}
+.text-orange-600{
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+}
+.text-orange-800{
+  --tw-text-opacity: 1;
+  color: rgb(154 52 18 / var(--tw-text-opacity, 1));
 }
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);

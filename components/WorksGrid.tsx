@@ -12,7 +12,7 @@ const WorksGrid = () => {
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       category: 'Web Development',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com/hanwang/ecommerce',
+      github: 'https://github.com/corincewang/ecommerce',
       live: 'https://ecommerce-demo.com',
       featured: true
     },
@@ -23,7 +23,7 @@ const WorksGrid = () => {
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
       category: 'Web Development',
       technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-      github: 'https://github.com/hanwang/taskapp',
+      github: 'https://github.com/corincewang/taskapp',
       live: 'https://taskapp-demo.com',
       featured: true
     },
@@ -45,7 +45,7 @@ const WorksGrid = () => {
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
       category: 'Data Science',
       technologies: ['Python', 'D3.js', 'Flask', 'Pandas'],
-      github: 'https://github.com/hanwang/dashboard',
+      github: 'https://github.com/corincewang/dashboard',
       live: 'https://dashboard-demo.com',
       featured: false
     },
@@ -67,7 +67,7 @@ const WorksGrid = () => {
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
       category: 'AI/ML',
       technologies: ['Python', 'TensorFlow', 'OpenAI API', 'FastAPI'],
-      github: 'https://github.com/hanwang/chatbot',
+      github: 'https://github.com/corincewang/chatbot',
       live: 'https://chatbot-demo.com',
       featured: false
     }

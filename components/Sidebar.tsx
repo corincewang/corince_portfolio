@@ -4,7 +4,7 @@ import { ChevronDown, Github, Linkedin, Mail, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 const Sidebar = () => {
-  const [sidebarState, setSidebarState] = useState('collapsed') // 'collapsed', 'expanded'
+  const [sidebarState, setSidebarState] = useState('expanded') // 'collapsed', 'expanded'
   const [isScrolled, setIsScrolled] = useState(false)
 
   const scrollToWorks = () => {
@@ -36,8 +36,8 @@ const Sidebar = () => {
             setIsScrolled(true)
             setSidebarState('collapsed')
           }
-          // 向上滚动时展开sidebar
-          else if (currentScrollY < lastScrollY) {
+          // 只有滚动到最顶部时才展开sidebar
+          else if (currentScrollY === 0) {
             setIsScrolled(false)
             setSidebarState('expanded')
           }
@@ -119,13 +119,13 @@ const Sidebar = () => {
       {sidebarState === 'expanded' && (
         <div className="flex flex-col space-y-4 sidebar-social-enter">
           <a
-            href="mailto:han.wang@email.com"
+            href="mailto:corincewang@gmail.com"
             className="text-white hover:text-orange-400 transition-colors social-icon hover-scale"
           >
             <Mail size={20} />
           </a>
           <a
-            href="https://github.com/hanwang"
+            href="https://github.com/corincewang"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-orange-400 transition-colors social-icon hover-scale"
@@ -133,7 +133,7 @@ const Sidebar = () => {
             <Github size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/hanwang"
+            href="https://linkedin.com/in/corincewang"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-orange-400 transition-colors social-icon hover-scale"

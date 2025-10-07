@@ -14,7 +14,7 @@ const ProjectList = () => {
       date: '2024-01-15',
       difficulty: 'Intermediate',
       tags: ['React', 'Node.js', 'MongoDB', 'JavaScript'],
-      github: 'https://github.com/hanwang/react-tutorial',
+      github: 'https://github.com/corincewang/react-tutorial',
       live: 'https://react-tutorial-demo.com',
       featured: true
     },
@@ -42,7 +42,7 @@ const ProjectList = () => {
       date: '2024-01-05',
       difficulty: 'Advanced',
       tags: ['Python', 'Machine Learning', 'TensorFlow', 'Data Science'],
-      github: 'https://github.com/hanwang/ml-tutorial',
+      github: 'https://github.com/corincewang/ml-tutorial',
       live: 'https://ml-tutorial-demo.com',
       featured: false
     },
@@ -56,7 +56,7 @@ const ProjectList = () => {
       date: '2023-12-28',
       difficulty: 'Intermediate',
       tags: ['React Native', 'JavaScript', 'Mobile', 'iOS', 'Android'],
-      github: 'https://github.com/hanwang/rn-tutorial',
+      github: 'https://github.com/corincewang/rn-tutorial',
       live: 'https://rn-tutorial-demo.com',
       featured: false
     },
@@ -84,7 +84,7 @@ const ProjectList = () => {
       date: '2023-12-15',
       difficulty: 'Intermediate',
       tags: ['API', 'REST', 'Documentation', 'Node.js', 'OpenAPI'],
-      github: 'https://github.com/hanwang/api-tutorial',
+      github: 'https://github.com/corincewang/api-tutorial',
       live: 'https://api-tutorial-demo.com',
       featured: false
     }
