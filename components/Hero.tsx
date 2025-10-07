@@ -21,7 +21,7 @@ const Hero = () => {
                 Hey there! My name is
               </p>
 
-              <h2 className="text-8xl md:text-9xl fancy-font text-gray-800 mb-8 leading-tight">
+              <h2 className="text-8xl md:text-9xl fancy-font text-gray-800 mb-8" style={{lineHeight: '1.2'}}>
                 Corince Wang
               </h2>
 

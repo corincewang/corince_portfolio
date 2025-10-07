@@ -56,9 +56,9 @@ const Sidebar = () => {
   return (
     <div className={`sidebar flex flex-col items-center justify-between p-6 relative sidebar-${sidebarState}`}>
       {/* Logo */}
-      <div className="text-white text-2xl font-bold serif-text sidebar-logo-enter">
-        HW
-      </div>
+              <div className="text-white text-2xl font-bold serif-text sidebar-logo-enter">
+                CW
+              </div>
 
       {/* Menu Button */}
       <button

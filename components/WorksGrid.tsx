@@ -30,7 +30,7 @@ const WorksGrid = () => {
       type: 'Research',
       icon: <Brain className="w-6 h-6" />,
       achievements: [
-        'Developed full-stack simulation interfaces for OSIRIS platform using JavaScript and Node.js, reducing onboarding time by 30%',
+        'Developed full-stack simulation interfaces for OSIRIS platform using JQuery, reducing onboarding time by 30%',
         'Engineered backend services in Python to train and serve ML-based Intrusion Detection Systems on NSL-KDD and UNSW-NB15 datasets',
         'Achieved up to 92% detection accuracy and reduced false positives by 20% compared to baseline models',
         'Implemented extensible GUI integrated with backend APIs for seamless switching between ML algorithms and datasets',
@@ -47,11 +47,12 @@ const WorksGrid = () => {
       type: 'Consulting',
       icon: <Users className="w-6 h-6" />,
       achievements: [
-        'Engineered and launched new web application using React.js and Node.js, decreasing page load times by 30%',
+        'Engineered and launched new web application using WordPress, GSuite, and tailwind css, decreasing page load times by 30%',
         'Increased daily active users by 18% and mobile traffic by 35% through responsive design implementation',
         'Collaborated directly with client to redesign website in Figma and implemented fully responsive, API-driven interface',
         'Increased user activation and in-person event participation by 20%',
-        'Expanded RSVP completion rate by 30% in Greater Pittsburgh Area'
+        'Expanded RSVP completion rate by 30% in Greater Pittsburgh Area',
+        'Delivered live website: https://pittsburghqueerhistory.com/'
       ],
       technologies: ['React.js', 'Node.js', 'Figma', 'API Development', 'Responsive Design', 'UI/UX']
     },
@@ -62,7 +63,7 @@ const WorksGrid = () => {
       location: 'Pittsburgh, PA',
       period: 'May 2024 - Jul 2024',
       type: 'Internship',
-      icon: <Database className="w-6 h-6" />,
+      icon: <Code className="w-6 h-6" />,
       achievements: [
         'Implemented React.js and Node.js to create core features including Search, Registration, Admin, and Dashboard pages',
         'Enabled users to quickly locate communities within dynamic web application Dah-Varsity across 50+ universities',
@@ -142,7 +143,23 @@ const WorksGrid = () => {
                   {experience.achievements.map((achievement, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
                       <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-600 leading-relaxed text-sm">{achievement}</p>
+                      <p className="text-gray-600 leading-relaxed text-sm">
+                        {achievement.includes('https://') ? (
+                          <>
+                            {achievement.split('https://')[0]}
+                            <a
+                              href={`https://${achievement.split('https://')[1]}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-orange-600 hover:text-orange-700 underline decoration-1 underline-offset-2 transition-colors"
+                            >
+                              https://{achievement.split('https://')[1]}
+                            </a>
+                          </>
+                        ) : (
+                          achievement
+                        )}
+                      </p>
                     </li>
                   ))}
                 </ul>

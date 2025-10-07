@@ -11,8 +11,8 @@ const ProjectList = () => {
       image: '/assets/Santorini.png',
       category: 'Web Application Development',
       duration: '2 months',
-      date: '2024-03-15',
-      tags: ['Java', 'Multiplayer', 'Game Development', 'Socket Programming', 'GUI'],
+      date: '2024-10-15',
+      tags: ['Java', 'Multiplayer', 'Spring Boot', 'Socket Programming', 'React.js', 'GUI'],
       github: 'https://github.com/corincewang/santorini-game',
       live: '',
       featured: true
@@ -35,18 +35,18 @@ const ProjectList = () => {
 
 
   return (
-    <div className="space-y-8 grid-container">
+    <div className="space-y-12 grid-container">
       {projects.map((project) => (
         <article
           key={project.id}
-          className="group bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden grid-item hover-lift"
+          className="group bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden grid-item hover-lift rounded-2xl"
         >
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+            <div className="md:w-2/5 h-48 md:h-auto relative overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-l-2xl"
               />
               {project.featured && (
                 <div className="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
@@ -55,7 +55,7 @@ const ProjectList = () => {
               )}
             </div>
             
-            <div className="md:w-2/3 p-8">
+            <div className="md:w-3/5 p-8">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-sm text-gray-500 font-medium">{project.category}</span>

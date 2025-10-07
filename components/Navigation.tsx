@@ -7,9 +7,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="flex justify-start items-center py-6 px-8">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold serif-text text-white">
-          Han Wang
-        </Link>
+
       </div>
     </nav>
   )
