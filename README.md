@@ -1,6 +1,6 @@
 # Han Wang - Personal Website
 
-A modern, minimalist personal website inspired by Sabanna's design aesthetic, built with Next.js and Tailwind CSS.
+A modern, minimalist personal website built with Next.js and Tailwind CSS.
 
 ## 🎨 Design Features
 
@@ -96,4 +96,4 @@ MIT License - feel free to use this design for your own portfolio!
 
 ---
 
-**Inspired by**: [sabanna.online](https://www.sabanna.online/)
+**Design Reference**: [sabanna.online](https://www.sabanna.online/)
