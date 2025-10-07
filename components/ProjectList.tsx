@@ -8,7 +8,7 @@ const ProjectList = () => {
       id: 1,
       title: 'Santorini Multiple Player Online Game',
       description: 'A multiplayer online board game implementation of Santorini with real-time gameplay, featuring strategic building mechanics and competitive multiplayer functionality.',
-      image: '/assets/Santorini.png',
+      image: '/assets/santorini.png',
       category: 'Web Application Development',
       duration: '2 months',
       date: '2024-10-15',
