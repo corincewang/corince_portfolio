@@ -1,11 +1,38 @@
 'use client'
 
-import { Calendar, MapPin, Building2, Code, Database, Brain, Users } from 'lucide-react'
+import { Calendar, MapPin, Building2, Code, Database, Brain, Users, Bot } from 'lucide-react'
 
 const WorksGrid = () => {
   const experiences = [
     {
       id: 1,
+      title: 'AI Agent Full-Stack Engineer',
+      company: 'PartSelect — E-commerce Parts AI Assistant',
+      location: 'Remote',
+      period: '04/2026 - Present',
+      type: 'Full-time',
+      icon: <Bot className="w-6 h-6" />,
+      achievements: [
+        'Built an AI agent for PartSelect\'s e-commerce parts domain (refrigerators, dishwashers), enabling part search, compatibility checks, installation guidance, and troubleshooting; improved user decision-making via structured product cards and actionable UI suggestions.',
+        'Designed multi-step OpenAI Function Calling tools, integrating Node.js backend services with domain-specific tools (part lookup, compatibility API, symptom-to-part mapping), decomposing user queries into retrieval, matching, and reasoning workflows for reliable task execution.',
+        'Developed a streaming conversational UI with Next.js and React 19, leveraging NDJSON over HTTP chunked transfer (ReadableStream) for incremental response parsing and real-time rendering, combined with suggestion-driven interactions.',
+        'Implemented structured response generation and grounding with server-side aggregation + embedding-based retrieval, combined with domain constraint enforcement to ensure high accuracy and prevent hallucinations in a production-like e-commerce setting.',
+        'Live demo: https://partselectaiagent.vercel.app/',
+      ],
+      technologies: [
+        'Next.js',
+        'React 19',
+        'Node.js',
+        'TypeScript',
+        'OpenAI',
+        'Function Calling',
+        'RAG',
+        'NDJSON',
+        'ReadableStream',
+      ],
+    },
+    {
+      id: 2,
       title: 'Software Engineer Internship',
       company: 'Menu. Inc.',
       location: 'Tokyo, Japan',
@@ -22,7 +49,7 @@ const WorksGrid = () => {
       technologies: ['React Native', 'Redux', 'Firebase Analytics', 'Detox', 'MCP', 'iOS', 'Android']
     },
     {
-      id: 2,
+      id: 3,
       title: 'Research Assistant',
       company: 'Center of Computational Analysis of Social & Organizational Systems',
       location: 'Carnegie Mellon University',
@@ -39,7 +66,7 @@ const WorksGrid = () => {
       technologies: ['JavaScript', 'Node.js', 'Python', 'Machine Learning', 'ML', 'Data Science', 'GUI Development']
     },
     {
-      id: 3,
+      id: 4,
       title: 'FullStack Technology Consultant',
       company: 'Pittsburgh Queer History Organization',
       location: 'Pittsburgh, PA',
@@ -57,7 +84,7 @@ const WorksGrid = () => {
       technologies: ['React.js', 'Node.js', 'Figma', 'API Development', 'Responsive Design', 'UI/UX']
     },
     {
-      id: 4,
+      id: 5,
       title: 'FullStack Engineer Internship',
       company: 'Toyz Electronics. Inc.',
       location: 'Pittsburgh, PA',
@@ -84,6 +111,8 @@ const WorksGrid = () => {
         return 'bg-purple-100 text-purple-800'
       case 'Consulting':
         return 'bg-green-100 text-green-800'
+      case 'Full-time':
+        return 'bg-amber-100 text-amber-900'
       default:
         return 'bg-gray-100 text-gray-800'
     }
@@ -104,7 +133,9 @@ const WorksGrid = () => {
             
             {/* Year label - positioned to avoid overlap */}
             <div className="absolute -left-12 top-1 text-xs font-bold text-orange-600 w-8 text-right">
-              {experience.period.split(' - ')[0].split(' ')[1]}
+              {experience.period
+                .split(' - ')[0]
+                .match(/\d{4}$/)?.[0] ?? experience.period.split(' - ')[0].split(' ')[1]}
             </div>
             
             {/* Content with reduced padding */}
